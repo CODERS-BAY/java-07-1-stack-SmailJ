@@ -20,25 +20,16 @@ public class Stack {
     }
 
     public int pop() {
-        if (ints.size() == 0) {
-            throw new EmptyStackException();
-        }
         ints.remove(ints.size() - 1);
         return 0;
     }
 
     public int peek() {
-        if (ints.size() == 0) {
-            throw new EmptyStackException();
-        }
         lastNumber = ints.get(ints.size() - 1);
         return lastNumber;
     }
 
     public int[] pop(int n) {
-        if (ints.size() == 0) {
-            throw new EmptyStackException();
-        }
         int[] nums = new int[ints.size()];
         for (int i = 0; i < n; i++) {
             nums[i] = ints.get(ints.size() -1);
