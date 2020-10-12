@@ -17,7 +17,11 @@ public class Stack {
         return listSize;
     }
 
-    public int pop() {
+    public int pop() throws StackTooSmall {
+        if (ints.size() == 0) {
+            throw new StackTooSmall("Error, empty List");
+        }
+
         int popNumber;
         popNumber = ints.remove(ints.size() - 1);
         return popNumber;
@@ -32,7 +36,7 @@ public class Stack {
     public int[] pop(int n) {
         int[] nums = new int[ints.size()];
         for (int i = 0; i < n; i++) {
-            nums[i] = ints.get(ints.size() -1);
+            nums[i] = ints.get(ints.size() - 1);
             ints.remove(ints.size() - 1);
             System.out.println(nums[i] + " removed ");
         }

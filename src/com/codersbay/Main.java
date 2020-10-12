@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws StackTooSmall {
 
         Scanner sc = new Scanner(System.in);
         Stack stack = new Stack();
